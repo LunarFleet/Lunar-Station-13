@@ -43,6 +43,17 @@ endmap
 map runtimestation
 endmap
 
+<<<<<<< HEAD
+=======
+map spookystation
+	minplayers 150
+endmap
+
+map festivestation
+	minplayers 150
+endmap
+
+>>>>>>> 336a66edd5... Merge pull request #15386 from keronshb/winterball2021
 map multiz_debug
 endmap
 
