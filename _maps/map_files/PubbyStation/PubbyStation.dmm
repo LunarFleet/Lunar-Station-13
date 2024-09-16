@@ -37610,8 +37610,14 @@
 	name = "Surgery Maintenance";
 	req_access_txt = "45"
 	},
+<<<<<<< HEAD
 /obj/structure/cable{
 	icon_state = "4-8"
+=======
+/obj/machinery/holopad,
+/turf/open/floor/plasteel/dark/side{
+	dir = 4
+>>>>>>> 4b7b814e70... Merge pull request #15403 from TripleShades/fixies
 	},
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden{
 	dir = 4
