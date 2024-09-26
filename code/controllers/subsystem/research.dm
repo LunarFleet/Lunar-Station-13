@@ -347,6 +347,16 @@ SUBSYSTEM_DEF(research)
 		for(var/i in bitcoins)
 			bitcoins[i] *= income_time_difference / 10
 		science_tech.add_point_list(bitcoins)
+<<<<<<< HEAD
+=======
+		var/list/income = science_tech.commit_income()
+		for(var/i in income)
+			var/old_weighted = science_tech.last_bitcoins[i] * (1 MINUTES - income_time_difference)
+			var/new_weighted = income[i] * income_time_difference
+			science_tech.last_bitcoins[i] = (old_weighted + new_weighted) / (1 MINUTES)
+	else
+		science_tech.last_bitcoins = bitcoins.Copy()
+>>>>>>> 72a169e336 (Merge pull request #15426 from Putnam3145/better-science-log)
 	last_income = world.time
 
 /datum/controller/subsystem/research/proc/calculate_server_coefficient()	//Diminishing returns.
