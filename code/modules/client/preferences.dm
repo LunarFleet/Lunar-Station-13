@@ -1705,7 +1705,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								snowflake_hair_list[S.name] = path
 
 					var/new_hair_style
+<<<<<<< HEAD
 					new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in snowflake_hair_list //LUNAR EDIT
+=======
+					new_hair_style = input(user, "Choose your character's hair style:", "Character Preference")  as null|anything in GLOB.hair_styles_list
+>>>>>>> 319c5e23fe... Merge pull request #15309 from LetterN/revert-15244-tgui-alerts-and-what-not
 					if(new_hair_style)
 						hair_style = new_hair_style
 
@@ -1765,7 +1769,11 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 								snowflake_hair_list[S.name] = path
 					//LUNAR CHANGE END
 					var/new_facial_hair_style
+<<<<<<< HEAD
 					new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in snowflake_hair_list //LUNAR EDIT
+=======
+					new_facial_hair_style = input(user, "Choose your character's facial-hair style:", "Character Preference")  as null|anything in GLOB.facial_hair_styles_list
+>>>>>>> 319c5e23fe... Merge pull request #15309 from LetterN/revert-15244-tgui-alerts-and-what-not
 					if(new_facial_hair_style)
 						facial_hair_style = new_facial_hair_style
 
@@ -1829,6 +1837,7 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 						var/modification_type = input(user, "Choose the modification to the limb:", "Character Preference") as null|anything in LOADOUT_LIMBS
 						if(modification_type)
 							if(modification_type == LOADOUT_LIMB_PROSTHETIC)
+<<<<<<< HEAD
 								//LUNAR CHANGES START, SPECIES-SPECIFIC PROSTHETIC SUPPORT
 								var/list/prosthetic_list
 								if(length(pref_species.custom_prosthetics))
@@ -1837,6 +1846,9 @@ GLOBAL_LIST_EMPTY(preferences_datums)
 									prosthetic_list = list("prosthetic") + GLOB.prosthetic_limb_types
 								var/prosthetic_type = input(user, "Choose the type of prosthetic", "Character Preference") as null|anything in prosthetic_list
 								//LUNAR CHANGES END
+=======
+								var/prosthetic_type = input(user, "Choose the type of prosthetic", "Character Preference") as null|anything in (list("prosthetic") + GLOB.prosthetic_limb_types)
+>>>>>>> 319c5e23fe... Merge pull request #15309 from LetterN/revert-15244-tgui-alerts-and-what-not
 								if(prosthetic_type)
 									var/number_of_prosthetics = 0
 									for(var/modified_limb in modified_limbs)
