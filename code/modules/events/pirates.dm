@@ -24,7 +24,11 @@
 	var/pirate_type = PIRATES_ROGUES //pick(PIRATES_ROGUES, PIRATES_SILVERSCALES, PIRATES_DUTCHMAN)
 	var/datum/comm_message/threat_msg = new
 	var/payoff = 0
+<<<<<<< HEAD
 	var/payoff_min = 10000
+=======
+	var/payoff_min = 10000 //documented this time
+>>>>>>> 5066e34736... Merge pull request #15258 from keronshb/pirate10k
 	var/ship_template
 	var/ship_name = "Space Privateers Association"
 	var/initial_send_time = world.time
